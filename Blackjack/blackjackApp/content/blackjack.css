@@ -1,0 +1,125 @@
+﻿body {
+  background-color: darkgreen;
+  font-family: Arial;
+}
+body .blackjack .player {
+  margin-bottom: 1rem;
+  background-color: #208020;
+  border-radius: 10px;
+}
+body .blackjack .player .player-name {
+  margin: 0;
+  padding: 1rem;
+  background-color: #6bb36b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-transform: uppercase;
+}
+body .blackjack .player .cards-list {
+  margin: 0;
+  padding: 1rem;
+}
+body .blackjack .player .cards-list .card-wrap {
+  list-style: none;
+  display: inline;
+}
+body .blackjack .player .cards-list .card-wrap .card {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 5.5rem;
+  height: 8rem;
+}
+body .blackjack .player .cards-list .card-wrap .card::before,
+body .blackjack .player .cards-list .card-wrap .card::after {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0.4rem;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body .blackjack .player .cards-list .card-wrap .card::before {
+  bottom: 0;
+  left: 0;
+}
+body .blackjack .player .cards-list .card-wrap .card::after {
+  top: 0;
+  right: 0;
+}
+body .blackjack .player .cards-list .card-wrap .card.hearts .sign,
+body .blackjack .player .cards-list .card-wrap .card.diamonds .sign {
+  color: red;
+}
+body .blackjack .player .cards-list .card-wrap .card.clubs .sign,
+body .blackjack .player .cards-list .card-wrap .card.spades .sign {
+  color: black;
+}
+body .blackjack .player .cards-list .card-wrap .card.hearts::before,
+body .blackjack .player .cards-list .card-wrap .card.hearts::after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAMAAACycDqVAAABRFBMVEUAAAD/AAD/AAD/AAC/AADVKyvbJCTfICDjHBzoFxfVFRXfICDjHBzcFyPgHx/iHR3bGxvcGhrfGCDgFx/cHBzdGxvfGiDbGB7eHBzeGyHdGB3eHBzfHBzbGx/cGh/cGh7dGh7eGh7eGh3cGRzeGh3cGh3cGR/dGR/eGx7eGR7eGR7cGx7dGh3dGh/cGR7dGx3dGx3dGh3cGh7cGh7dGR7eGx3cGx/cGx/dGh7cGx/dGx7dGh7dGh7dGh7eGh7cGh3dGh/dGR7dGh/dGh7eGh7dGh7dGh3eGh7dGh7dGh7dGx3eGh/cGh7dGh7dGh7dGh7dGh7dGR7eGh7dGh7dGh3dGh/dGh7dGh7dGh/dGh7dGh7dGh7dGh7cGh7dGh7dGh/dGh7dGh7dGh7dGh7dGh7dGh7dGh7dGh7dGh7dGh7dGh7dGh64kzUiAAAAa3RSTlMAAQIDBAYHCAkLDBASFhkaHB0gISQmKCsuLzU2Nzk6O0RFRkhOUFFSVFxdX2FiZmhpam1ueXt8fX6FhoeIiYqTlpeen6Ckpaiys7a3uLm7vL7Jzs/Q0dLU2drb4+Tl6eru8fP09fb3+Pv8/U3c3iwAAAGhSURBVBgZrcF7W9JwGAbgRyYklgfMc0oqlqWlZGqaaZbTykN5IhJM1KY0nu//fwxwbuzd9tuV943/lEwlIUimkpA8Xc8ZJK8OFjrh0LVw8IekkVtPw23oO23lj+1oaN8o07Y3CIepazr96kNN/ymdjGewZSp0K3ajqrtIN3MCDR0lNttH1Q82O+9A3Qd6ZYAMvd6jpvWCXlvANr0uNFjSFJwCBQpGYclSUAbKFMzCskzBJXBJwTIsixTcJBI3FCzC8paSb18pmYdlhhG8hCXNCEZhecQIHqLmjMqKqPtCZduoe0Nlc6jrpbLHaDimoiPcekdFS7jVU6GSSg9s+1SygzsvqOQ57rQWqKAQg0OWCmbh1PaboYptcHnNUK/gFssxxEkMTcYZYgweuwy0A68BkwHMAQjWGGANkgd5+sonIHpi0sffYfhYoY8V+EnkKfoZh68hgwJjEAFmKJhGoE/02ECw+CGbHMYRIlWiSymFUCMGHYwRKJg0aTMnoSRLWxaKVtmwClUtOmv0FijTdFbpGiLQdFLXEIn2eVNDRDEN9+cf2ux4jkYXDwAAAAAASUVORK5CYII=') /*/blackjackApp/content/images/hearts.png*/;
+}
+body .blackjack .player .cards-list .card-wrap .card.diamonds::before,
+body .blackjack .player .cards-list .card-wrap .card.diamonds::after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAYAAACFrsqnAAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH2wQIDiUBEXMFGAAABJdJREFUaIHtmttrXEUcxz8zm2zS2lvA2PQk3WS3qRWWYuhC1AeRigjFpq0god6oWARR/AMUsaFFBB/1Qd9itUIrYlovCAoqSLWRViJ1sbTZi9vttjFgvbTJ5rLz86Erasxuzzk74w2/T7szv8v3y8ycM7+ZA//DH7JebCDTGdvqOk+Ty+ACKgtDCAi8p0Bc5dKuAgOMe2u3AZuATdXfzuBMiIDWqH2/JVJD4jCfs8A5r/thYOPvmvqqbU6gXATN9fSsMrNyGqR9Qdd3phxdv/778Z9s53QyImbO7FlEBMB1qnXmGRc5rY9IrrOnz4j5AmiuYTKnle6Pn8uP2cxrdUSOp1LNRswwtUUANBsxw8dTqXo2gWFVSNv5ySeBPh+mfVVba7A2tapTahSI+nSZVSrSnziX+8pGfisjcuraDcuNmIP4FwEQFakcTLe3L7PBwYqQ5ujUy8CGEK43tEaXvGSDQ8NCsmtij4C6L3QA4YGs1727UR4NrZEznd23aJFPCDalFsOM1ua2eLE4GjZAaCHjXV29ykQ+q/HiC0NlUhvVH7+Qz4fxDjW1MonESmX0YXsiAKTdaPN2JpFYGcY7sJCS5y2lPD8CJMMkvAo2Up5/K9fT0xrUMZCQdDIZnabpDWBz0EQBcHtl1hxKJ5OB1p1vIQKRlos/vwbcFZhaQCjY1nrx0isCEb8+voR8DE1ZL7ZfwWB4ekEh92Y6Y8N+xVz1qXWmt7clMjV7SGB74+TCQEbKbSt2JtPp2XpWdYVcWL36msuRlsPAHVa5BccHS5i/2yuVpmoZ1BSSa+/pME3mCIp+N9yCQo3qObUjPpm/sGjvYo2Zrq6NGPUuqJhbckEhBbRsXVcsnlzY86fFPt7RvQWjj/7zRACoGEYfHe/o3rKwx+m51l+Jf9nUIoc2231NLYB1xeJJPRe5SZBj7rn5g4LPpdJ882Iiqv21UfK8pdM0jQB3OmHnF0reXyKVe+o9fuuuEa9Umiq3LR8AGbHPzieEN8urVuyoJwJ81iMCkUxnbFgJD9ph5w8K9sdLhd0KKj5s/UEgkvW6D4DsbIyeb7yeKBV2+REBAR6/CirltmW7gHdCU/Of60ihVHjIrwgI+B5JptOzOqoHgY8Cs/OPD6fblg9uhvkgTqFq9kwisZLy/Kf88drABk7S2nTrumz2x6COoQ8fTq+OJSIRdczm4YMwl+otlc6G8Q69Rbl+opDVujIA1K0TfGJa68pAWBHQ4F4rXiyOKtTjjcQAUKgnGjnTuhLDAjJe7ABwfygCwquJ84VdjXKwsvstz00/CpwK6ifwzVIz85gNDlaEJCcnLykV2Umw9TJDRQY7JiYu2+BgrR6p3nM869deieztnTj7ta38Vguri2vanwP83A2e+Pb82edt5v5bLkPRJlWrrggL66Vu/Fx+DFEv1uoX5AXbIsBRza5b1D5Qk4t0TUi5Za+TnC6CxvP5HxQ8tbBdoZ528dXDldiOIKCz3tovQd1YbRpLlAopBcZFPmfHQQqMgT2//jfIkCsRziGgMl7sRMaLHReHow+Ov6BTIFkYEqWMy6/n/lP4BYkOhXPFC2pnAAAAAElFTkSuQmCC') /*/blackjackApp/content/images/diamonds.png*/;
+}
+body .blackjack .player .cards-list .card-wrap .card.clubs::before,
+body .blackjack .player .cards-list .card-wrap .card.clubs::after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAYAAACFrsqnAAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH2QcRFDgcu9HgtQAAA3BJREFUaIHt2ctrH1UUB/BPfqlCuhHUplZTK6igqcVHKsQKiltF3eqqXYjiQhQUEVofK91oN+IfUAqKLmytD/ABMWKlIiJRo0IRFa1VVKgVKjRJ4+LOz06G+f3mcWd+aeH3hcPAveeec74z93HOHYYYYoh+GGnJ7jrcgWuwPmn7HV/iHfzZkt/GsBlvYBHLPWQR+zC5SjH2xQiexpLeBPIIPam9WVEZo3hFeQJZedkZQuY59Ul05dmBR53BLeJJLOMUbh5w7CtwKCeouvLJgGP/HzeUDLCKXFc3mE7dgbg7YmzjNmOIXB8xtnGbMUQ2RIzthUvqDowhMhYxtnGbMUTayJf+qDswhshXEWN7Ya7uwBgiH0SMHaTNQpyDo5o7Q45gzUAZpPBgiQDLyv0Djn0FRjGTE1RVeT+xVRtF6fMm4bSdEs6NMfyMH3EAn+JCzOLqmjHM4zZhF5zGnbgMG/GvMH0/Fwq2n6oav1YoSYve5Pe4RyhnZ0voZ2UGF+HexFaR/lvYUpbE46pVest4V/gyD+NYCf1jeEio7d+r6GsRjxWReKmi0bTM4WLsKqG7K9Gdi/D3Yi8Sj0YY7cpx5b7mUqIb6++RLIkrcbIBw4OWk7g8TeS1MyCouvIqYfs9X7g8W7VTNRILWN8RbgTPVhKEVOn2jnCtebZjS0c4kNrA81bejBzECy352gB7tbObjGJ7qm170rbQgr+9HfzW7MsBvwpnxXiqbTxpO9qGvw6+bsHwd8nz0lTbRPL8tgV/8x0hOVxq2PC+5Jkmsil57m/Y1xLeTjtuar4eF5JBOJxq736ldfinQX+vp1lNam4R7kxsrrUy71p0+rrnqYZ8LeAqGexswPChVLBTOf1TSd+YUJTF+nsiS4KQruyJMPqDkJp3sSNHZ0eqf0KoNOv626NPhTuCZ4T/FVWMfuj0uuhid47e7ozOOD6u6OuUMDVL/eWaVu5S4RfcJz9XO5ijP5ujtwYPCGdPkb8Z3JgXcBGrSdyFrUIasFa4fzosbHkfCad4XnB/J/ppnMB5wsLP4lzcKiSxVwgX2ieEA/QzvIlvCuJtHHkLPbvgG0XMlWk/TPfpy50asWiLyE19+ra15LNxjOh/J3xk9UKrhq2Kd5/Gf9u1UeJOCPv8vFAi/JW0XyAUcZuFBPKLFnwPMcQQPfAfIf77X3aYT28AAAAASUVORK5CYII=') /*/blackjackApp/content/images/clubs.png*/;
+}
+body .blackjack .player .cards-list .card-wrap .card.spades::before,
+body .blackjack .player .cards-list .card-wrap .card.spades::after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAYAAACFrsqnAAAABmJLR0QA/wD/AP+gvaeTAAADQElEQVRogeWZS0gVURzGfz4StadZ3rIoKExahBL0WGcJQhERFgptiiiqRYs20SpcRBHkpgfRrkUtihAqkjZBtQy0ggrE3ilaURSmdbMWZ0bHc8/cmTlz5sylPvi4zH/O/P/fx5x75jzgH0GJhRq7gUagx0KtRDAHuAr8cXgFmJ2qIg2sAF4wacLlM6AuRV2R0AR8JteEy0/AhtTUhcQ2YAx/Ey5Hga0paQzELiBLsAmXv4C2VJTmQSvRTLjMIt5iQaCFcN3Jj2PARuuqJawCvqFvwuUXJ1cqqAXeBgiMwjfAfKsOgFLgfkzhKt7DzmxjAqcMG/DyhC0TzcB4gkbGsfDBnA70J2jCZR9QmaSRMxZMuDydlIn16H30dJkF1pg2MQ14atGEy8dObWM4mIIJl/tNmagA3qdo5B1QbsLIkRRNuDwc18RMYKgAjAwihn5fFAcYOUQK8x8FMsAB3YeLgVek/zZc9gNFOkaaC0C8zCY/sfm61p5ovq0gsqZq4q36kuIPYK5KsN8baQXKorq3gHJgh+qGn5HNyWmJjRZVUDUKlCHW0BWJytHHd6AKMamcgOqNNFK4JgBmAA1yUGVkXfJaYmOtHFAZqbcgJC5WygGVkeUWhMTFMjmgMmLqDOM8cMlzfRk4ayh3VZhGvZj5eDUASz3XdU7MRO5eWXSpwshwGLchMAj89Fx/RWyvmkCORlXXemmg0CjiQGeeJ1YDfERMfeKiTw6ojNwyUOgh4oOV8cQyTuyBgfx35IDKSDcwELPQDee31hNb6Px2xcw9gNAYCvvQ/yMOM7lL2OGJn3RilU4b3fx7o7guAq5pFmr35OnyxL3doU0z93U0VomVwO2IhTqlHK899+TuGnX7tRsxz9JCCXAcGAkoMgYck56tVrRbILU5SvACbsTRYOTcZImTrAdxGusWGQIuopj7AFsUorYr2tUDF5i67ZRFbJd2OLUTQTFiBAqaynSSa+RcwDOznNxWT62C8IRcI89TVaSBDP6nWouTKBi006iLTfgPk80J1UwEN/Efhe6mqCsSapg6ssn8DSwyXTSJrrUT9fLAW7M9z30t5CuoiwrELv4j4ANi6g5iSl8LrCbkCu+/xF93kAM4YBEIhAAAAABJRU5ErkJggg==') /*/blackjackApp/content/images/spades.png*/;
+}
+body .blackjack .player .cards-list .card-wrap .card .sign {
+  display: block;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0.8rem;
+  padding-top: 1.4rem;
+  height: 6.4rem;
+}
+body .blackjack .player .cards-list .card-wrap .card .suit {
+  display: none;
+}
+body .blackjack .player .points {
+  margin: 0;
+  padding: 1rem;
+}
+body .blackjack .player .points .points-label {
+  color: goldenrod;
+  text-transform: uppercase;
+}
+body .blackjack .player .points .points-value {
+  color: gold;
+}
+body .blackjack .toolbar {
+  padding: 1rem;
+}
+body .blackjack .end-game {
+  padding: 1rem;
+  position: absolute;
+  top: 15rem;
+  left: 50%;
+  width: 20rem;
+  height: 5rem;
+  margin-left: -11rem;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+body .blackjack .end-game .winner {
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+/*# sourceMappingURL=blackjack.css.map */
