@@ -1,6 +1,6 @@
 # Blackjack
 
-This is an a simplified version of the Blackjack game.
+This is a simplified version of the Blackjack game.
 
 The player can press the "hit" button until he is ok with the points.
 Then he can press the "stick" button to pass the turn to the dealer, who try to beat him.
